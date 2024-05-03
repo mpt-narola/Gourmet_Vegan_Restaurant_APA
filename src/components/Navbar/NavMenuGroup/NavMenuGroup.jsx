@@ -9,6 +9,7 @@ const NavMenuGroup = ({ isCollapse = false, handleCollapse = () => {} }) => {
   const divRef = useRef(null);
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -40,21 +41,26 @@ const NavMenuGroup = ({ isCollapse = false, handleCollapse = () => {} }) => {
       if (isCollapse) {
         handleCollapse();
       }
+      setMobile(false);
+    } else {
+      setMobile(true);
     }
   }, [windowSize]);
 
   return (
-    <div
-      className={`nav_menu-container ${isCollapse ? "show-collapse" : ""}`}
-      ref={divRef}>
-      {isCollapse && (
-        <img src={closeIcon} alt="close_icon" onClick={handleCollapse} />
-      )}
-
-      {menus_data.map((menu, index) => (
-        <NavMenu content={menu} key={index} />
-      ))}
-    </div>
+    (!mobile || isCollapse) && (
+      <div
+        className={`nav_menu-container ${isCollapse ? "show-collapse" : ""}
+      `}
+        ref={divRef}>
+        {isCollapse && (
+          <img src={closeIcon} alt="close_icon" onClick={handleCollapse} />
+        )}
+        {menus_data.map((menu, index) => (
+          <NavMenu content={menu} key={index} />
+        ))}
+      </div>
+    )
   );
 };
 

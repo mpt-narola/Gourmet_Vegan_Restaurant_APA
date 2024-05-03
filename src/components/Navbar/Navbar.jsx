@@ -20,9 +20,8 @@ const Navbar = () => {
       <div className="logo-container">
         <img src={logo} alt="logo" className="log-img " />
       </div>
-      <div className={`${!collapse ? "nav-menu" : ""}`}>
-        <NavMenuGroup isCollapse={collapse} handleCollapse={handleCollapse} />
-      </div>
+      <NavMenuGroup isCollapse={collapse} handleCollapse={handleCollapse} />
+
       <div className="nav-icon-menu">
         <NavIconMenuGroup />
       </div>
