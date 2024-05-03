@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import "./About.scss";
 
@@ -9,9 +9,9 @@ import about3Img from "../../assets/images/imgs/About 3.png";
 import leafVector from "../../assets/images/vectors/leaf.svg";
 import leafVector1 from "../../assets/images/vectors/leaf2.svg";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
   return (
-    <div className="about-page">
+    <div className="about-page" ref={ref}>
       <div className="about-container">
         <div className="left-video-thumb">
           <img src={chefCookerImg} alt="chef-cooker" className="chef-cooker" />
@@ -53,6 +53,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;

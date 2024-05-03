@@ -5,7 +5,11 @@ import NavMenu from "../NavBtn/NavMenu";
 import { menus_data } from "../../../utils/data/menus_data";
 import closeIcon from "../../../assets/images/vectors/close.svg";
 
-const NavMenuGroup = ({ isCollapse = false, handleCollapse = () => {} }) => {
+const NavMenuGroup = ({
+  isCollapse = false,
+  handleCollapse = () => {},
+  handleScrollToPage = () => {},
+}) => {
   const divRef = useRef(null);
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -57,7 +61,12 @@ const NavMenuGroup = ({ isCollapse = false, handleCollapse = () => {} }) => {
           <img src={closeIcon} alt="close_icon" onClick={handleCollapse} />
         )}
         {menus_data.map((menu, index) => (
-          <NavMenu content={menu} key={index} />
+          <NavMenu
+            content={menu.title}
+            key={index}
+            navigateName={menu.scrollPageName}
+            handleScrollToPage={handleScrollToPage}
+          />
         ))}
       </div>
     )

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Home.scss";
 
 import locationIcon from "../../assets/images/vectors/location.svg";
@@ -6,11 +6,12 @@ import locationIcon from "../../assets/images/vectors/location.svg";
 import qualityLogo from "../../assets/images/vectors/Group 1000002476.svg";
 import Navbar from "../../components/Navbar/Navbar";
 
-const Home = () => {
+const Home = forwardRef((props, ref) => {
+  const { handleScrollToPage } = props;
   return (
     <>
-      <Navbar />
-      <div className="hero_container">
+      <Navbar handleScrollToPage={handleScrollToPage} />
+      <div className="hero_container" ref={ref}>
         <div className="hero_side_text_div">
           <h1 className="title">Welcome To The Gourmet Vegan Restaurant</h1>
           <p className="desc">
@@ -42,6 +43,6 @@ const Home = () => {
       </div>
     </>
   );
-};
+});
 
 export default Home;

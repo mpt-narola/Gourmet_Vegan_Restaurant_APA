@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Contact.scss";
 import Subscribe from "../../components/Search/Subscribe";
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   return (
-    <div className="contact-page">
+    <div className="contact-page" ref={ref}>
       <div className="contact-container">
         <div className="title">
           <h2>Get Our Promo Code by Subscribing To Our Newsletter</h2>
@@ -14,5 +14,5 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+});
 export default Contact;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./FoodMenu.scss";
 import menuImage from "../../assets/images/imgs/Menu Image.jpeg";
 import FoodMenuDetail from "../../components/FoodMenuDetail/FoodMenuDetail";
@@ -24,9 +24,9 @@ const renderDetailList = () => {
   ));
 };
 
-const FoodMenu = () => {
+const FoodMenu = forwardRef((props, ref) => {
   return (
-    <div className="food-menu-page">
+    <div className="food-menu-page" ref={ref} id="testnks">
       <div className="bg-leaf6-vector-div">
         <img src={bgLeaf6Vector} alt="bg_leaf6_vector" />
       </div>
@@ -43,6 +43,6 @@ const FoodMenu = () => {
       </div>
     </div>
   );
-};
+});
 
 export default FoodMenu;

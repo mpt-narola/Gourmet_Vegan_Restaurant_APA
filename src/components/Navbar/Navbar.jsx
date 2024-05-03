@@ -8,7 +8,7 @@ import NavIconMenuGroup from "../NavIconMenuGroup/NavIconMenuGroup";
 
 import hamburger from "../../assets/images/vectors/hamburger.svg";
 
-const Navbar = () => {
+const Navbar = ({ handleScrollToPage }) => {
   const [collapse, setShowCollapse] = useState(false);
 
   const handleCollapse = () => {
@@ -20,7 +20,11 @@ const Navbar = () => {
       <div className="logo-container">
         <img src={logo} alt="logo" className="log-img " />
       </div>
-      <NavMenuGroup isCollapse={collapse} handleCollapse={handleCollapse} />
+      <NavMenuGroup
+        isCollapse={collapse}
+        handleCollapse={handleCollapse}
+        handleScrollToPage={handleScrollToPage}
+      />
 
       <div className="nav-icon-menu">
         <NavIconMenuGroup />

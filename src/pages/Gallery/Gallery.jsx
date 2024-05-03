@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./Gallery.scss";
 import { gallery_imgs_data } from "../../utils/data/gallery_imgs_data";
 import instagramIcon from "../../assets/images/vectors/social_icons/Instagram.svg";
 
-const Gallery = () => {
+const Gallery = forwardRef((props, ref) => {
   return (
-    <div className="gallery-page">
+    <div className="gallery-page" ref={ref}>
       <div className="title">
         <h2>Gallery</h2>
       </div>
@@ -28,6 +28,6 @@ const Gallery = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Gallery;
