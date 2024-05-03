@@ -1,0 +1,103 @@
+.specialty-page {
+  min-height: 100vh;
+  height: 100%;
+  padding: 120px 140px;
+  background-color: #f3efea;
+  background-image: url("../../assets/images/imgs/bgImage.svg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media only screen and (max-width: 1200px) {
+    & {
+      padding: 60px 70px;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    & {
+      padding: 30px 40px;
+      align-items: center;
+    }
+  }
+
+  .dish_card_group {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-around;
+
+    @media only screen and (max-width: 768px) {
+      & {
+        justify-content: center;
+        padding: 0px 0px;
+      }
+    }
+  }
+
+  .title {
+    h2 {
+      font-family: "Healing Again Demo";
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: var(--mcolor);
+      @media screen and (max-width: 992px) {
+        & {
+          font-size: 25px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+  .desc {
+    p {
+      color: #606060;
+      font-family: "WixMadeforDisplay-Regular";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      text-align: center;
+      @media screen and (max-width: 992px) {
+        & {
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  .bg-leaf4-vector-div {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    @media only screen and (max-width: 900px) {
+      width: 50%;
+    }
+  }
+  .bg-leaf5-vector-div {
+    position: absolute;
+    right: 32%;
+    top: 20%;
+  }
+  .onion-vector-div {
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+  }
+  .garlic-vector-div {
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+  }
+}

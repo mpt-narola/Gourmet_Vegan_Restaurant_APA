@@ -1,0 +1,79 @@
+.dish-card-container {
+  max-width: 250px;
+  width: 100%;
+  height: 428px;
+  box-shadow: 0px 0px 30px 0px #101a240d;
+  background-color: #ffffff;
+  z-index: 2;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  .dish-image-div {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+
+    .heart-not-fill {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+    }
+    .dish_image {
+      object-fit: cover;
+    }
+  }
+
+  .dish-detail {
+    height: 40%;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5px;
+
+    .dish-title {
+      font-family: "WixMadeforDisplay-Semibold";
+      font-size: 18px;
+      line-height: 22.68px;
+      text-align: left;
+      color: #101a24;
+    }
+
+    .dish-desc {
+      font-family: "WixMadeforDisplay-Regular";
+      font-size: 16px;
+      line-height: 28px;
+      text-align: left;
+      color: #606060;
+    }
+
+    .dish-price_addtocart-div {
+      display: flex;
+      justify-content: space-between;
+
+      .dish-price {
+        font-family: "WixMadeforDisplay-Bold";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30.24px;
+        text-align: left;
+        color: #101a24;
+      }
+      .addtocart-btn {
+        padding: 7.5px 13.5px;
+        display: flex;
+        align-items: center;
+        background-color: var(--scolor);
+        color: var(--mcolor);
+      }
+    }
+  }
+}

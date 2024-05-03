@@ -1,0 +1,147 @@
+$height: calc(100vh - 60px);
+
+.hero_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $height;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  // background-position: center center;
+  background-image: url("../../assets/images/imgs/heroImage.jpeg");
+  background-repeat: no-repeat;
+
+  .hero_side_text_div {
+    position: relative;
+    left: 160px;
+    color: #ffffff;
+    max-width: 550px;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media only screen and (max-width: 992px) {
+      & {
+        max-width: 450px;
+        left: 60px;
+        height: 300px;
+        gap: 15px;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      & {
+        max-width: 380px;
+        left: 40px;
+        height: 300px;
+        gap: 15px;
+      }
+    }
+    @media only screen and (max-width: 476px) {
+      & {
+        max-width: 335px;
+        left: 40px;
+        height: 300px;
+        gap: 15px;
+      }
+    }
+
+    .title {
+      font-family: "Healing Again Demo";
+      font-size: 45px;
+      font-weight: 400 !important;
+      line-height: 60px;
+      text-align: left;
+      word-spacing: 5px;
+      margin-bottom: 0;
+
+      @media only screen and (max-width: 992px) {
+        & {
+          font-size: 25px;
+          line-height: 45px;
+        }
+      }
+    }
+
+    .desc {
+      font-family: "WixMadeforDisplay-Regular";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+      margin-bottom: 0;
+      @media only screen and (max-width: 992px) {
+        & {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+    .btn-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .book-btn {
+      padding: 7.5px 13.5px;
+      display: flex;
+      align-items: center;
+      background-color: var(--scolor);
+      color: var(--mcolor);
+
+      @media only screen and (max-width: 992px) {
+        & {
+          padding: 4.5px 6.5px;
+        }
+      }
+
+      .location-icon-parent {
+        width: 20px;
+        height: 20px;
+        padding: 1px 4px 1px 4px;
+
+        img {
+          width: 12px;
+          height: 18px;
+        }
+      }
+    }
+
+    .explore-btn {
+      padding: 7.5px 13.5px;
+      border: 1px solid #ffffff;
+
+      @media only screen and (max-width: 992px) {
+        & {
+          padding: 4.5px 6.5px;
+        }
+      }
+    }
+    .explore-btn:hover {
+      border-color: var(--scolor);
+      background-color: var(--scolor);
+      color: var(--mcolor);
+    }
+  }
+  .quality-logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 202px;
+    width: 202px;
+    border-radius: 190px;
+    bottom: -102px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #e1e1e1;
+    padding: 24px;
+    img {
+      width: 154px;
+      height: 154px;
+    }
+  }
+}

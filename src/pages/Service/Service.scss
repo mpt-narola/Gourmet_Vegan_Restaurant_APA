@@ -1,0 +1,116 @@
+.service-page {
+  min-height: 100vh;
+  height: 100%;
+  padding: 120px 140px;
+  background-color: #f3efea;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("../../assets/images/imgs/bgImage.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media only screen and (max-width: 1200px) {
+    & {
+      padding: 60px 70px;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    & {
+      padding: 30px 40px;
+      align-items: center;
+    }
+  }
+
+  .service-container {
+    position: relative;
+    width: 100%;
+    min-height: 390px;
+    height: 100%;
+    border: 10px solid #ffffff;
+    background-color: var(--mcolor);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    .title {
+      h2 {
+        font-family: "Healing Again Demo";
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #ffffff;
+        @media screen and (max-width: 992px) {
+          & {
+            font-size: 25px;
+            line-height: 45px;
+          }
+        }
+      }
+    }
+    .service-btns-group {
+      flex: 1;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-self: center;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .service-menu-div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-self: flex-start;
+      cursor: pointer;
+
+      .menu-img {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        background-color: #ffffff;
+      }
+      .menu-click {
+        background-color: var(--scolor);
+      }
+
+      .service-title {
+        font-family: "WixMadeforDisplay-Semibold";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17.64px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+    .bg-leaf-img {
+      position: absolute;
+      bottom: -230px;
+      right: -70px;
+      overflow: hidden;
+      z-index: -1;
+
+      @media only screen and (max-width: 900px) {
+        & {
+          width: 50%;
+          bottom: -130px;
+          right: -30px;
+        }
+      }
+    }
+  }
+}

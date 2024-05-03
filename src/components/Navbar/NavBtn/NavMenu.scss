@@ -1,0 +1,23 @@
+.menu-text {
+  font-family: "WixMadeforDisplay-Semibold";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.64px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--sdark);
+  position: relative;
+
+  &:hover {
+    &::after {
+      content: url("../../../assets/images/other/Group\ 9064.svg");
+      display: block;
+      width: 100%;
+      position: absolute;
+      height: 0px;
+      color: var(--mcolor);
+      right: 0px;
+      left: 0px;
+    }
+  }
+}

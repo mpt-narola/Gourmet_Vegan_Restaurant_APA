@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: WixMadeforDisplay-Medium;
+  src: url("../src/assets/fonts/Wix_Madefor_Display/static/WixMadeforDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: WixMadeforDisplay-Semibold;
+  src: url("../src/assets/fonts/Wix_Madefor_Display/static/WixMadeforDisplay-SemiBold.ttf");
+}
+@font-face {
+  font-family: WixMadeforDisplay-Bold;
+  src: url("../src/assets/fonts/Wix_Madefor_Display/static/WixMadeforDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: WixMadeforDisplay-Regular;
+  src: url("../src/assets//fonts/Wix_Madefor_Display/static/WixMadeforDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: Healing Again Demo;
+  src: url("../src/assets/fonts/Healing_Again_Demo/HealingAgainDemoRegular-BF64e57d97381e0.ttf");
+}
+
+:root {
+  --mcolor: #0b1928;
+  --scolor: #ddbc7a;
+  --sdark: #7a622f;
+}
+
+body {
+  font-family: "WixMadeforDisplay-Medium";
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}

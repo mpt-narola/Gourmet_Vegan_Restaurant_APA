@@ -1,0 +1,32 @@
+.bottom-dotted-border {
+  border-bottom: 1px dotted #fff;
+}
+.detail-container {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  color: #ffffff;
+  background-color: var(--mcolor);
+
+  .title_price_div {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    font-family: "WixMadeforDisplay-Semibold";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.68px;
+    text-align: left;
+  }
+
+  .desc {
+    font-family: "WixMadeforDisplay-Regular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;
+  }
+}
