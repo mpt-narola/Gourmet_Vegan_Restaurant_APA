@@ -43,7 +43,6 @@ const NavMenuGroup = ({ isCollapse = false, handleCollapse = () => {} }) => {
     }
   }, [windowSize]);
 
-  console.log({ isCollapse });
   return (
     <div
       className={`nav_menu-container ${isCollapse ? "show-collapse" : ""}`}

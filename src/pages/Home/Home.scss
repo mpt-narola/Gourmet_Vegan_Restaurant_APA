@@ -35,10 +35,10 @@ $height: calc(100vh - 60px);
     }
     @media only screen and (max-width: 768px) {
       & {
-        max-width: 380px;
+        max-width: 450px;
         left: 40px;
         height: 300px;
-        gap: 15px;
+        gap: 12px;
       }
     }
     @media only screen and (max-width: 476px) {
@@ -46,7 +46,7 @@ $height: calc(100vh - 60px);
         max-width: 335px;
         left: 40px;
         height: 300px;
-        gap: 15px;
+        gap: 8px;
       }
     }
 
