@@ -29,7 +29,6 @@ const Gallery = forwardRef((props, ref) => {
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX) * 3; //scroll-fast
     slider.scrollLeft = scrollLeft - walk;
-    console.log(walk);
   });
   return (
     <div className="gallery-page" ref={ref}>
