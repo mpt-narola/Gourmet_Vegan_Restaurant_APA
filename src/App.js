@@ -41,12 +41,12 @@ function App() {
     <div className="App min-h-screen">
       <Home ref={homeRef} handleScrollToPage={handleScrollToPage} />
       <About ref={aboutRef} />
-      <Service ref={serviceRef} />
-      <Specialty ref={specialtyRef} />
+      <Service />
+      <Specialty />
       <FoodMenu ref={foodMenuRef} />
       <Gallery ref={galleryRef} />
       <Contact ref={contactRef} />
-      <Footer ref={footerRef} />
+      <Footer />
     </div>
   );
 }
