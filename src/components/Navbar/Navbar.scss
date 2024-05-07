@@ -7,7 +7,7 @@
   background-color: var(--scolor);
   // flex-wrap: wrap;
   position: relative;
-  gap: 10px;
+  gap: 15px;
 
   .nav-menu {
     align-self: center;
@@ -50,11 +50,16 @@
     }
   }
   @media only screen and (max-width: 768px) {
+    padding: 9px 20px;
     & {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
+    }
+
+    .hamburger-icon-div {
+      left: 10px;
     }
   }
 }
