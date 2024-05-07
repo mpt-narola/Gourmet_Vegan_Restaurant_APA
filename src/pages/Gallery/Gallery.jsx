@@ -1,41 +1,44 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 import "./Gallery.scss";
 import { gallery_imgs_data } from "../../utils/data/gallery_imgs_data";
 import instagramIcon from "../../assets/images/vectors/social_icons/Instagram.svg";
 
 const Gallery = forwardRef((props, ref) => {
-  const slider = document.querySelector(".img-list");
+  const slider = useRef(null);
   let isDown = false;
   let startX;
   let scrollLeft;
 
-  slider?.addEventListener("mousedown", (e) => {
-    isDown = true;
-    slider?.classList?.add("active");
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-  slider?.addEventListener("mouseleave", () => {
-    isDown = false;
-    slider.classList.remove("active");
-  });
-  slider?.addEventListener("mouseup", () => {
-    isDown = false;
-    slider.classList.remove("active");
-  });
-  slider?.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk;
-  });
+  useEffect(() => {
+    slider?.current?.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider?.current?.classList?.add("active");
+      startX = e.pageX - slider?.current?.offsetLeft;
+      scrollLeft = slider?.current?.scrollLeft;
+    });
+    slider?.current?.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider?.current?.classList.remove("active");
+    });
+    slider?.current?.addEventListener("mouseup", () => {
+      isDown = false;
+      slider?.current?.classList.remove("active");
+    });
+    slider?.current?.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider?.current?.offsetLeft;
+      const walk = (x - startX) * 2; //scroll-fast
+      slider.current.scrollLeft = scrollLeft - walk;
+    });
+  }, [slider]);
+
   return (
     <div className="gallery-page" ref={ref}>
       <div className="title">
         <h2>Gallery</h2>
       </div>
-      <div className="img-list">
+      <div className="img-list" ref={slider}>
         {gallery_imgs_data.map((imgPath, index) => (
           <div className="gallery-img" key={index}>
             <img src={imgPath} alt={`image_${index + 1}`} />
