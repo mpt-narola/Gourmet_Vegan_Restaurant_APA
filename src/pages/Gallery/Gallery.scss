@@ -52,23 +52,23 @@
       display: none;
     }
 
-    @media only screen and (max-width: 1200px) {
-      & {
-        flex-direction: column;
-        gap: 40px;
-      }
-      .gallery-img {
-        align-self: center;
-      }
-    }
+    // @media only screen and (max-width: 1200px) {
+    //   & {
+    //     flex-direction: column;
+    //     gap: 40px;
+    //   }
+    //   .gallery-img {
+    //     align-self: center;
+    //   }
+    // }
 
     .gallery-img {
-      height: 450px;
+      height: 400px;
       min-width: 300px;
-      @media screen and (max-width: 500px) {
-        min-height: 200px;
-        min-width: 200px;
-      }
+      // @media screen and (max-width: 500px) {
+      //   min-height: 200px;
+      //   min-width: 200px;
+      // }
       width: 100%;
       position: relative;
       transition: all 4s ease;
